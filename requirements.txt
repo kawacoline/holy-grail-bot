@@ -1,0 +1,27 @@
+# Polymarket API client (V2 — April 2026 upgrade)
+py-clob-client-v2
+
+# WebSocket client for market data (CLOB WSS)
+websockets>=12.0
+
+# HTTP client for market discovery and price fetching
+httpx>=0.27.0
+
+# Environment configuration
+python-dotenv>=1.0.1
+
+# Logging and UI
+loguru>=0.7.2
+rich>=13.7.0
+watchfiles>=0.21.0
+
+# Web3 for Polygon transactions
+web3>=6.11.1
+
+# Gasless relayer for CTF redemption (proxy wallets)
+py-builder-relayer-client
+py-builder-signing-sdk
+
+# Web dashboard
+fastapi
+uvicorn

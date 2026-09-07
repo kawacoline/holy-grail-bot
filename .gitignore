@@ -1,0 +1,69 @@
+
+# Environment variables
+.env
+.env.local
+
+# Virtual Environment
+.venv/
+venv/
+env/
+.env/
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Logs
+logs/
+*.log
+
+# VS Code
+.vscode/
+
+# GitHub
+.github/
+
+# Archives
+*.zip
+# Environment variables
+.env
+.env.local
+
+# Virtual Environment
+.venv/
+venv/
+env/
+.env/
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Logs
+logs/
+*.log
+
+# VS Code
+.vscode/
+
+# GitHub
+.github/
+
+# Archives
+*.zip
+*.tar.gz
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Ignored Folders
+clients/
+data/
+docs/polymarket_dump/

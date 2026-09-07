@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Grail Bot Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glass-container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <div class="cube-loader">
+                    <div class="cube-wrapper">
+                        <div class="cube-span"></div>
+                    </div>
+                </div>
+                <h1>BTC 15M Arb Bot <span class="badge">24/7</span></h1>
+            </div>
+            <div class="server-status">
+                <span class="status-dot"></span> <span id="server-status-text">Connected</span>
+            </div>
+        </header>
+
+        <main>
+            <!-- Info Row -->
+            <section class="info-row">
+                <div class="card glass-card">
+                    <h3>Market</h3>
+                    <p id="val-market" class="highlight-text loading">Loading...</p>
+                </div>
+                <div class="card glass-card">
+                    <h3>Mode</h3>
+                    <p id="val-mode" class="loading">Loading...</p>
+                </div>
+                <div class="card glass-card">
+                    <h3>Time Left</h3>
+                    <p id="val-time" class="countdown loading">Loading...</p>
+                </div>
+            </section>
+
+            <!-- Order Book Row -->
+            <section class="order-book-row">
+                <div class="card glass-card side-up">
+                    <div class="card-header">
+                        <h2>▲ UP</h2>
+                        <span>BTC goes up</span>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-box">
+                            <span class="label">Ask Price</span>
+                            <span class="value" id="val-price-up">$0.0000</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="label">Ask Size</span>
+                            <span class="value" id="val-size-up">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card glass-card side-down">
+                    <div class="card-header">
+                        <h2>▼ DOWN</h2>
+                        <span>BTC goes down</span>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-box">
+                            <span class="label">Ask Price</span>
+                            <span class="value" id="val-price-down">$0.0000</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="label">Ask Size</span>
+                            <span class="value" id="val-size-down">0</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Arbitrage Check -->
+            <section class="card glass-card arbitrage-card">
+                <h2>💰 Arbitrage Check</h2>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <span class="label">UP + DOWN Total</span>
+                        <span class="value huge" id="val-total">$0.0000</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="label">Threshold</span>
+                        <span class="value" id="val-threshold">$0.000</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="label">Potential Profit</span>
+                        <span class="value gradient-text" id="val-profit">$0.0000 (0.00%)</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Status Engine -->
+            <section class="card status-panel" id="status-panel">
+                <h2 id="val-status-icon">🔍</h2>
+                <h3 id="val-status-text">Scanning...</h3>
+            </section>
+
+            <!-- Bot Stats -->
+            <section class="card glass-card bottom-stats">
+                <div class="stat-item">
+                    <span class="label">Scans</span>
+                    <span class="value" id="val-scans">0</span>
+                </div>
+                <div class="divider"></div>
+                <div class="stat-item">
+                    <span class="label">Opportunities</span>
+                    <span class="value text-green" id="val-opportunities">0</span>
+                </div>
+                <div class="divider"></div>
+                <div class="stat-item">
+                    <span class="label">Trades</span>
+                    <span class="value text-cyan" id="val-trades">0</span>
+                </div>
+                <div class="divider"></div>
+                <div class="stat-item">
+                    <span class="label">Balance</span>
+                    <span class="value text-yellow" id="val-balance">$0.00</span>
+                </div>
+                <div class="divider"></div>
+                <div class="stat-item">
+                    <span class="label">Order Size</span>
+                    <span class="value" id="val-order-size">0</span>
+                </div>
+            </section>
+
+            <!-- Error Banner -->
+            <div id="error-banner" class="error-banner hidden">
+                <span id="val-error-text"></span>
+            </div>
+            
+            <div class="footer-info">
+                Last Update: <span id="val-timestamp">Never</span>
+            </div>
+        </main>
+    </div>
+
+    <!-- Background Effects -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
